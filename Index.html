@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>منصة أتلكون</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+      background: #f9f9f9;
+      padding: 20px;
+      text-align: center;
+      margin: 0;
+    }
+    header {
+      background-color: #004d40;
+      color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .logo {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      color: #00695c;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+      background-color: #00796b;
+      color: white;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-top: 20px;
+      display: none;
+    }
+    .open-link {
+      display: none;
+      margin-top: 10px;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      text-align: right;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      margin-bottom: 30px;
+    }
+    .animated-text {
+      font-size: 1.3em;
+      margin: 20px 0;
+      color: #004d40;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .flags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .flags img {
+      width: 40px;
+      height: auto;
+      border-radius: 4px;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="شعار أتلكون" class="logo" />
+    <h2>منصة أتلكون – بوابتك للتجارة المغاربية</h2>
+  </header>
+
+  <<h1><h1>مرحباً بك في منصة أتلكون</h1>
+<p class="animated-text">
+من جنوب تونس إلى صحراء الجزائر،<br>
+من سواحل ليبيا إلى جبال الأطلس…<br>
+من نواكشوط إلى البحر الأبيض...
+</p>
+<p class="animated-text">
+<strong>نحن في "أتلكون" نمدّ الجسور، ونفتح الأبواب للتجارة الحرة.</strong>
+</p>
+<p class="animated-text">
+نربط الأسواق ونكسر الحواجز، لنصنع سوقًا مغاربية موحّدة.
+</p>
+
+  <section>
+    <button onclick="showForm('trader')">تاجر</button>
+    <button onclick="showForm('consumer')">مستهلك</button>
+  </section>
+
+  <section id="formContainer">
+    <iframe id="formFrame" frameborder="0" allowfullscreen></iframe>
+    <div class="open-link" id="fallbackLink">
+      <p>لم يظهر النموذج؟ يمكنك فتحه مباشرة من هنا:</p>
+      <a id="formLink" href="#" target="_blank">
+        <button>فتح النموذج في تبويب جديد</button>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>عن مشروع أتلكون</h2>
+    <p>أتلكون هي منصة رقمية مبتكرة تهدف إلى تعزيز التجارة الحرة بين دول المغرب الكبير (تونس، الجزائر، المغرب، ليبيا، وموريتانيا). تسهل المنصة ربط التجار، الحرفيين، والمستهلكين من خلال سوق رقمي موحد، يدعم النمو الاقتصادي ويوفر حلولًا عملية للنقل والجمركة والتسويق باللهجات المحلية.</p>
+  </section>
+
+  <section>
+    <h2>من نحن</h2>
+    <p>فريق أتلكون مكوّن من شباب وشابات من مختلف دول المغرب الكبير، يؤمنون بقوة التبادل الإقليمي، ويدفعهم الحماس لخلق سوق رقمي مستقل يعبر عن هويتنا، ويجمع منتجاتنا، ويربط بيننا دون وسيط.</p>
+  </section>
+
+  <section>
+    <h2>دولنا المغاربية</h2>
+    <div class="flags">
+      <img src="https://flagcdn.com/w40/tn.png" alt="تونس">
+      <img src="https://flagcdn.com/w40/dz.png" alt="الجزائر">
+      <img src="https://flagcdn.com/w40/ma.png" alt="المغرب">
+      <img src="https://flagcdn.com/w40/ly.png" alt="ليبيا">
+      <img src="https://flagcdn.com/w40/mr.png" alt="موريتانيا">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 منصة أتلكون – جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    function showForm(type) {
+      const frame = document.getElementById('formFrame');
+      const link = document.getElementById('formLink');
+      const fallback = document.getElementById('fallbackLink');
+
+      if (type === 'trader') {
+        frame.src = "https://forms.gle/p727LUnC5ce1moux6";
+        link.href = "https://forms.gle/p727LUnC5ce1moux6";
+      } else if (type === 'consumer') {
+        frame.src = "https://forms.gle/bMENtGf12g5kcawv7";
+        link.href = "https://forms.gle/bMENtGf12g5kcawv7";
+      }
+
+      frame.style.display = "block";
+      fallback.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
