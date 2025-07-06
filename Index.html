@@ -117,15 +117,20 @@
     <button onclick="showForm('consumer')">مستهلك</button>
   </section>
 
-  <section id="formContainer">
-    <iframe id="formFrame" frameborder="0" allowfullscreen></iframe>
-    <div class="open-link" id="fallbackLink">
-      <p>لم يظهر النموذج؟ يمكنك فتحه مباشرة من هنا:</p>
-      <a id="formLink" href="#" target="_blank">
-        <button>فتح النموذج في تبويب جديد</button>
-      </a>
-    </div>
-  </section>
+<section>
+  <button onclick="showForm('trader')">تاجر</button>
+  <button onclick="showForm('consumer')">مستهلك</button>
+</section>
+
+<script>
+  function showForm(userType) {
+    if(userType === 'trader') {
+      window.open('https://forms.gle/NDTCwiSW7MQBtCNd7', '_blank');
+    } else if(userType === 'consumer') {
+      window.open('https://forms.gle/p727LUnC5ce1moux6', '_blank');
+    }
+  }
+</script>
 
   <section>
     <h2>عن مشروع أتلكون</h2>
