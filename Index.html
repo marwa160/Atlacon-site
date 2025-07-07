@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -39,19 +40,6 @@
     }
     button:hover {
       background-color: #004d40;
-    }
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      margin-top: 20px;
-      display: none;
-    }
-    .open-link {
-      display: none;
-      margin-top: 10px;
     }
     section {
       max-width: 800px;
@@ -99,38 +87,23 @@
     <h2>منصة أتلكون – بوابتك للتجارة المغاربية</h2>
   </header>
 
-  <<h1><h1>مرحباً بك في منصة أتلكون</h1>
-<p class="animated-text">
-من جنوب تونس إلى صحراء الجزائر،<br>
-من سواحل ليبيا إلى جبال الأطلس…<br>
-من نواكشوط إلى البحر الأبيض...
-</p>
-<p class="animated-text">
-<strong>نحن في "أتلكون" نمدّ الجسور، ونفتح الأبواب للتجارة الحرة.</strong>
-</p>
-<p class="animated-text">
-نربط الأسواق ونكسر الحواجز، لنصنع سوقًا مغاربية موحّدة.
-</p>
+  <h1>مرحباً بك في منصة أتلكون</h1>
+  <p class="animated-text">
+    من جنوب تونس إلى صحراء الجزائر،<br>
+    من سواحل ليبيا إلى جبال الأطلس…<br>
+    من نواكشوط إلى البحر الأبيض...
+  </p>
+  <p class="animated-text">
+    <strong>نحن في "أتلكون" نمدّ الجسور، ونفتح الأبواب للتجارة الحرة.</strong>
+  </p>
+  <p class="animated-text">
+    نربط الأسواق ونكسر الحواجز، لنصنع سوقًا مغاربية موحّدة.
+  </p>
 
-  <section>
+  <section style="text-align: center;">
     <button onclick="showForm('trader')">تاجر</button>
     <button onclick="showForm('consumer')">مستهلك</button>
   </section>
-
-<section>
-  <button onclick="showForm('trader')">تاجر</button>
-  <button onclick="showForm('consumer')">مستهلك</button>
-</section>
-
-<script>
-  function showForm(userType) {
-    if(userType === 'trader') {
-      window.open('https://forms.gle/NDTCwiSW7MQBtCNd7', '_blank');
-    } else if(userType === 'consumer') {
-      window.open('https://forms.gle/p727LUnC5ce1moux6', '_blank');
-    }
-  }
-</script>
 
   <section>
     <h2>عن مشروع أتلكون</h2>
@@ -158,21 +131,12 @@
   </footer>
 
   <script>
-    function showForm(type) {
-      const frame = document.getElementById('formFrame');
-      const link = document.getElementById('formLink');
-      const fallback = document.getElementById('fallbackLink');
-
-      if (type === 'trader') {
-        frame.src = "https://forms.gle/p727LUnC5ce1moux6";
-        link.href = "https://forms.gle/p727LUnC5ce1moux6";
-      } else if (type === 'consumer') {
-        frame.src = "https://forms.gle/bMENtGf12g5kcawv7";
-        link.href = "https://forms.gle/bMENtGf12g5kcawv7";
+    function showForm(userType) {
+      if (userType === 'trader') {
+        window.open('https://forms.gle/NDTCwiSW7MQBtCNd7', '_blank');
+      } else if (userType === 'consumer') {
+        window.open('https://forms.gle/p727LUnC5ce1moux6', '_blank');
       }
-
-      frame.style.display = "block";
-      fallback.style.display = "block";
     }
   </script>
 
